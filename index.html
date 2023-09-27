@@ -27,7 +27,7 @@
                 coeficiente1 = (-valorB + Math.sqrt(delta)) / (2 * valorA);
                 coeficiente2 = (-valorB - Math.sqrt(delta)) / (2 * valorA);
 
-                document.getElementById("resultado").innerHTML = `x1 = ${coeficiente1.toFixed(4).replace(".", ",")} e x2 = ${coeficiente2.toFixed(4).replace(".", ",")}`;
+                document.getElementById("resultado").innerHTML = `x1 = ${coeficiente1.toFixed(4).replace(".", ",")}<br>x2 = ${coeficiente2.toFixed(4).replace(".", ",")}`;
             }
         }
         function click_limpar() {
@@ -48,7 +48,7 @@
     <form>
         <div>
             <label for="valorA">Valor A</label><br>
-            <input type="number" name="" id="valorA" value="1">
+            <input type="number" name="" id="valorA">
         </div>
         <div>
             <label for="valorB">Valor B</label><br>
@@ -62,8 +62,8 @@
 
         </div>
         <div>
-            <input type="button" value="Calcular" onclick="click_calcular();">
-            <input type="button" value="Limpar" onclick="click_limpar();">
+            <input id="button" type="button" value="Calcular" onclick="click_calcular();">
+            <input id="button" type="button" value="Limpar" onclick="click_limpar();">
         </div>
     </form>
 
